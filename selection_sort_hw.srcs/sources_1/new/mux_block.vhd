@@ -32,12 +32,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity mux_block is
-    Port ( dinA : in STD_LOGIC;
-           dinB : in STD_LOGIC;
-           dinC : in STD_LOGIC;
+    generic(
+        data_width :  integer := 8
+    );
+    Port ( dinA : in STD_LOGIC_VECTOR(data_width-1 downto 0);
+           dinB : in STD_LOGIC_VECTOR(data_width-1 downto 0);
+           dinC : in STD_LOGIC_VECTOR(data_width-1 downto 0);
            sel  : in std_logic_vector(1 downto 0);
-           dinD : in STD_LOGIC;
-           dout : out STD_LOGIC);
+           dinD : in STD_LOGIC_VECTOR(data_width-1 downto 0);
+           dout : out STD_LOGIC_VECTOR(data_width-1 downto 0));
 end mux_block;
 
 architecture Behavioral of mux_block is
@@ -47,6 +50,6 @@ begin
         dinA when "00",
         dinB when "01",
         dinC when "10",
-        dinD when "11";
+        dinD when others;
 
 end Behavioral;

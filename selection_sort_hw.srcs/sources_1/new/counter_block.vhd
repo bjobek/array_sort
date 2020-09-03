@@ -39,6 +39,7 @@ entity counter_block is
            ld : in STD_LOGIC;
            inc : in STD_LOGIC;
            clk : in STD_LOGIC;
+           tick : in std_logic;
            din : in STD_LOGIC_VECTOR(MAX-1 downto 0);
            dout : out STD_LOGIC_VECTOR(MAX-1 downto 0));
 end counter_block;
@@ -48,13 +49,19 @@ architecture Behavioral of counter_block is
 begin
     process(clk)
     begin
+        tick <= '0';
         if(rising_edge(clk)) then
             if(clr='1') then 
                 count_u <= (others=>'0');
             elsif(ld = '1') then
                 count_u <= unsigned(din);
             elsif(inc = '1') then
-                count_u <= (count_u + 1);
+                if(count_u = 2**MAX-1) then
+                    tick <= '1';
+                    count_u <= (others => '0');
+                else
+                    count_u <= (count_u + 1);
+                end if;
             end if;    
         end if;
     end process;
