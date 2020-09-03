@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/comparator_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'comparator_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/counter_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter_tb'

@@ -2,7 +2,9 @@
 2020.1.1
 Aug  5 2020
 23:19:43
-C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/comparator_tb.vhd,1599137986,vhdl,,,,comparator_tb,,,,,,,,
-C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/mux_tb.vhd,1599132647,vhdl,,,,mux_tb,,,,,,,,
+C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/comparator_tb.vhd,1599138074,vhdl,,,,comparator_tb,,,,,,,,
+C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/counter_tb.vhd,1599144090,vhdl,,,,counter_tb,,,,,,,,
+C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/mux_tb.vhd,1599138540,vhdl,,,,mux_tb,,,,,,,,
 C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sources_1/new/comparator_block.vhd,1599137769,vhdl,C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/comparator_tb.vhd,,,comparator_block,,,,,,,,
+C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sources_1/new/counter_block.vhd,1599143827,vhdl,C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/counter_tb.vhd,,,counter_block,,,,,,,,
 C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sources_1/new/mux_block.vhd,1599132356,vhdl,C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sim_1/new/mux_tb.vhd,,,mux_block,,,,,,,,

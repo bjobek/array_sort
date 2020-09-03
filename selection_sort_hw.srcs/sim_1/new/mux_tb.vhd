@@ -45,5 +45,7 @@ begin
         wait for clk_period;
         sel <= "11";     
         wait for clk_period;
+        
+        std.env.finish; -- stop simulation
     end process ;
 end arch;

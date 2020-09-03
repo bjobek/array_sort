@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1/comparator_block.tcl"
+  variable script "C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1/counter_block.tcl"
   variable category "vivado_synth"
 }
 
@@ -86,7 +86,7 @@ set_property ip_output_repo c:/Users/Admin/Documents/Projects/array_sort/selecti
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sources_1/new/comparator_block.vhd
+read_vhdl -library xil_defaultlib C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.srcs/sources_1/new/counter_block.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -100,17 +100,17 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top comparator_block -part xc7z010clg400-1
+synth_design -top counter_block -part xc7z010clg400-1
 OPTRACE "synth_design" END { }
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef comparator_block.dcp
+write_checkpoint -force -noxdef counter_block.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file comparator_block_utilization_synth.rpt -pb comparator_block_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file counter_block_utilization_synth.rpt -pb counter_block_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

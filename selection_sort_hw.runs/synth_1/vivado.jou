@@ -2,11 +2,11 @@
 # Vivado v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Thu Sep  3 14:51:51 2020
-# Process ID: 25668
+# Start of session at: Thu Sep  3 16:37:14 2020
+# Process ID: 3136
 # Current directory: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1
-# Command line: vivado.exe -log comparator_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source comparator_block.tcl
-# Log file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1/comparator_block.vds
+# Command line: vivado.exe -log counter_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_block.tcl
+# Log file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1/counter_block.vds
 # Journal file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source comparator_block.tcl -notrace
+source counter_block.tcl -notrace
