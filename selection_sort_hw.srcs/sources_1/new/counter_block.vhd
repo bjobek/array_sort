@@ -33,13 +33,13 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity counter_block is
     generic(
-           MAX : integer := 5
+           MAX : integer 
            );
     Port ( clr : in STD_LOGIC;
            ld : in STD_LOGIC;
            inc : in STD_LOGIC;
            clk : in STD_LOGIC;
-           tick : in std_logic;
+           tick : out std_logic;
            din : in STD_LOGIC_VECTOR(MAX-1 downto 0);
            dout : out STD_LOGIC_VECTOR(MAX-1 downto 0));
 end counter_block;

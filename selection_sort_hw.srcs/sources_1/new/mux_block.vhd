@@ -33,14 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_block is
     generic(
-        data_width :  integer := 8
+        width :  integer
     );
-    Port ( dinA : in STD_LOGIC_VECTOR(data_width-1 downto 0);
-           dinB : in STD_LOGIC_VECTOR(data_width-1 downto 0);
-           dinC : in STD_LOGIC_VECTOR(data_width-1 downto 0);
+    Port ( dinA : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dinB : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dinC : in STD_LOGIC_VECTOR(width-1 downto 0);
            sel  : in std_logic_vector(1 downto 0);
-           dinD : in STD_LOGIC_VECTOR(data_width-1 downto 0);
-           dout : out STD_LOGIC_VECTOR(data_width-1 downto 0));
+           dinD : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dout : out STD_LOGIC_VECTOR(width-1 downto 0));
 end mux_block;
 
 architecture Behavioral of mux_block is

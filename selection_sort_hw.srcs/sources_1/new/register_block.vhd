@@ -32,11 +32,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity register_block is
+    Generic(
+            width : integer
+            );
     Port ( clr : in STD_LOGIC;
            ld : in STD_LOGIC;
             clk : in STD_LOGIC;
-           din : in STD_LOGIC;
-           dout : out STD_LOGIC);
+           din : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dout : out STD_LOGIC_VECTOR(width-1 downto 0));
 end register_block;
 
 architecture Behavioral of register_block is
@@ -47,7 +50,7 @@ begin
     begin
         if(rising_edge(clk)) then
             if(clr = '1') then
-                dout <= '0';
+                dout <= (others=>'0');
             elsif(ld = '1') then
                 dout <= din;
             end if;
