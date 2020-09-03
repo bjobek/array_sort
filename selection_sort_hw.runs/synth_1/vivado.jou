@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Sep  3 11:14:32 2020
-# Process ID: 8357
-# Current directory: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1
-# Command line: vivado -log single_port_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_port_ram.tcl
-# Log file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/single_port_ram.vds
-# Journal file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/vivado.jou
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Thu Sep  3 14:51:51 2020
+# Process ID: 25668
+# Current directory: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1
+# Command line: vivado.exe -log comparator_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source comparator_block.tcl
+# Log file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1/comparator_block.vds
+# Journal file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source single_port_ram.tcl -notrace
+source comparator_block.tcl -notrace

@@ -3,13 +3,17 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/SDK/2019.1/bin:/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2019.1/bin
+  PATH=C:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.1/bin
 else
-  PATH=/tools/Xilinx/SDK/2019.1/bin:/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=C:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.1/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1'
+HD_PWD='C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log single_port_ram.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_port_ram.tcl
+EAStep vivado -log comparator_block.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source comparator_block.tcl

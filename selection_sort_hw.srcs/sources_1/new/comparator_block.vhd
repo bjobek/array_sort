@@ -54,6 +54,4 @@ begin
             dout <='1';
         end if;
     end process;
-
-
 end Behavioral;

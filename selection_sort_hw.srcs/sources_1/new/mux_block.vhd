@@ -47,6 +47,6 @@ begin
         dinA when "00",
         dinB when "01",
         dinC when "10",
-        dinD when "11";
-
+        dinD when "11",
+        '0' when others;
 end Behavioral;

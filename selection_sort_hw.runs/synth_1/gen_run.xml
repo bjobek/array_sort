@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1599124470">
-  <File Type="VDS-TIMING-PB" Name="single_port_ram_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="single_port_ram_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="single_port_ram.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="single_port_ram_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="single_port_ram_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="single_port_ram_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="single_port_ram.vds"/>
-  <File Type="REPORTS-TCL" Name="single_port_ram_reports.tcl"/>
-  <File Type="PA-TCL" Name="single_port_ram.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1599137507">
+  <File Type="PA-TCL" Name="comparator_block.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="comparator_block_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="comparator_block_reports.tcl"/>
+  <File Type="RDS-RDS" Name="comparator_block.vds"/>
+  <File Type="RDS-UTIL" Name="comparator_block_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="comparator_block_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="comparator_block.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="comparator_block_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="comparator_block_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/ram_block.vhd">
+    <File Path="$PSRCDIR/sources_1/new/comparator_block.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/top_block.vhd">
+    <File Path="$PSRCDIR/sources_1/new/mux_block.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/mux_block.vhd">
+    <File Path="$PSRCDIR/sources_1/new/ram_block.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_block.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -45,16 +52,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/comparator_block.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="single_port_ram"/>
+      <Option Name="TopModule" Val="comparator_block"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
