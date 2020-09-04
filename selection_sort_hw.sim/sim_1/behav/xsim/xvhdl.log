@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/top_block.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_block'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/counter_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter_block'

@@ -52,9 +52,9 @@ begin
       
         if(rising_edge(clk)) then
             tick <= '0';
-            if(count_u = 2**MAX-1) then
-                   tick <= '1';
-            end if;
+           --if(count_u = 2**MAX-1) then
+            --       tick <= '1';
+            --end if;
                     
             if(clr='1') then 
                 count_u <= (others=>'0');
@@ -62,8 +62,8 @@ begin
                 count_u <= unsigned(din);
             elsif(inc = '1') then
                 if(count_u = 2**MAX-1) then
-                   
-                  --  count_u <= (others => '0');
+                    tick <='1'; 
+                    count_u <= (others => '0');
                 else
                     count_u <= (count_u + 1);
                 end if;
