@@ -49,16 +49,21 @@ architecture Behavioral of counter_block is
 begin
     process(clk)
     begin
-        tick <= '0';
+      
         if(rising_edge(clk)) then
+            tick <= '0';
+            if(count_u = 2**MAX-1) then
+                   tick <= '1';
+            end if;
+                    
             if(clr='1') then 
                 count_u <= (others=>'0');
             elsif(ld = '1') then
                 count_u <= unsigned(din);
             elsif(inc = '1') then
                 if(count_u = 2**MAX-1) then
-                    tick <= '1';
-                    count_u <= (others => '0');
+                   
+                  --  count_u <= (others => '0');
                 else
                     count_u <= (count_u + 1);
                 end if;

@@ -48,10 +48,10 @@ begin
 
     process(dinA_u,dinB_u)
     begin
-        if(dinA_u > dinB_u) then
-            dout <= '0';
+        if(dinA_u < dinB_u) then
+            dout <= '1';
         else
-            dout <='1';
+            dout <='0';
         end if;
     end process;
 

@@ -248,59 +248,97 @@ begin
 end process;
 
 -- next-state logic
-process (prest)
+process (prest,tmp_index_ctr_tick,current_index_ctr_tick)
 begin
    nxtst <= prest; -- stay in current state by default
-   current_index_ctr_inc <= '0';
-   tmp_index_ctr_inc <= '0';
-   current_val_reg_ld <= '0';
-   smallest_val_reg_ld<= '0';
-   smallest_index_reg_ld<='0';
-   clr <= '0';
-   addr_mux_sel <= "10"; -- tmp_index_ctr
-   ram_wr <= '0';
+  
    case prest is
       when S0 =>
-          clr <= '1';
-          addr_mux_sel <= "10"; -- tmp_index_ctr
+        
           nxtst <= S1;
       when S1 =>
-          current_val_reg_ld <= '1';
-          smallest_val_reg_ld<= '1';
-          smallest_index_reg_ld<='1';
+         
+          
+          nxtst <= S2;
       when S2 =>
-
+        
          if (tmp_index_ctr_tick='1') then
              if(current_index_ctr_tick = '1') then
                  nxtst<= S6;
              else
                  nxtst<= S4;
-             end if; 
+             end if;
+
+                 
          else
+             
              nxtst <= S3;
          end if;
       when S3 =>
-         tmp_index_ctr_inc <= '1'; 
-         
-         if (comp_out = '1') then
-            smallest_index_reg_ld<='1';
-            smallest_val_reg_ld<='1';        
-         end if;
-         nxtst <= S2;
+       
+     
+        
+        nxtst <= S2;
       when S4 =>
-          addr_mux_sel <= "00";
-          value_mux_sel<= "00";
-          ram_wr<='1'; 
+         
+          nxtst <= S5;
       when S5 =>
-          addr_mux_sel <= "01";
-          value_mux_sel<= "01";
-          ram_wr<='1'; 
+          
+          nxtst <= S1; 
       when S6 =>
           
 
    end case;
 end process;
 
+       
+-- Mealy outputs logic 
+process (prest,comp_out)
+begin
+    --Default Values
+   current_index_ctr_inc <= '0';
+   tmp_index_ctr_inc <= '0';
+   current_val_reg_ld <= '0';
+   smallest_val_reg_ld<= '0';
+   smallest_index_reg_ld<='0';
+   tmp_index_ctr_ld <='0';
+   clr <= '0';
+   addr_mux_sel <= "10"; -- tmp_index_ctr
+   ram_wr <= '0';
+   
+   case prest is 
+      when S0=>
+          clr <= '1';
+          addr_mux_sel <= "10"; -- tmp_index_ctr
+      when S1=>
+          current_val_reg_ld <= '1';
+          smallest_val_reg_ld<= '1';
+          smallest_index_reg_ld<='1';
+          tmp_index_ctr_ld <='1';
+      when S2=>
+      
+      when S3=>
+        tmp_index_ctr_inc<='1';
+         if (comp_out = '1') then
+            smallest_index_reg_ld<='1';
+            smallest_val_reg_ld<='1';        
+         end if;
+        
+      when S4=>
+          addr_mux_sel <= "00";
+          value_mux_sel<= "00";
+          ram_wr<='1'; 
+      when S5=>
+          addr_mux_sel <= "01";
+          value_mux_sel<= "01";
+          ram_wr<='1';
+          current_index_ctr_inc <= '1';
+          
+      
+      when S6=> 
+    
 
+   end case;
+end process;
 
 end Behavioral;

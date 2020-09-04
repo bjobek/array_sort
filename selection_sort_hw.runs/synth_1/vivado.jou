@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Sep  3 11:14:32 2020
-# Process ID: 8357
+# Start of session at: Fri Sep  4 09:39:13 2020
+# Process ID: 24477
 # Current directory: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1
-# Command line: vivado -log single_port_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_port_ram.tcl
-# Log file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/single_port_ram.vds
+# Command line: vivado -log top_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
+# Log file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/top_block.vds
 # Journal file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source single_port_ram.tcl -notrace
+source top_block.tcl -notrace

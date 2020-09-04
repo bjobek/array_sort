@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log single_port_ram.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_port_ram.tcl
+EAStep vivado -log top_block.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl

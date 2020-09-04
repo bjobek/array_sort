@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sim_1/new/counter_tb.vhd,1599206725,vhdl,,,,counter_tb,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sim_1/new/top_block_tb.vhd,1599201436,vhdl,,,,top_block_tb,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/comparator_block.vhd,1599202719,vhdl,,,,comparator_block,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/counter_block.vhd,1599210382,vhdl,/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sim_1/new/counter_tb.vhd,,,counter_block,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/mux_block.vhd,1599144338,vhdl,,,,mux_block,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/ram_block.vhd,1599209954,vhdl,,,,single_port_ram,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/register_block.vhd,1599144677,vhdl,,,,register_block,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.srcs/sources_1/new/top_block.vhd,1599210641,vhdl,,,,top_block,,,,,,,,
