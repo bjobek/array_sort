@@ -2,11 +2,11 @@
 # Webtalk v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Thu Sep  3 13:29:04 2020
-# Process ID: 10584
+# Start of session at: Fri Sep  4 23:30:13 2020
+# Process ID: 25576
 # Current directory: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim/xsim.dir/mux_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim/xsim.dir/counter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim/xsim.dir/mux_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/Admin/Documents/Projects/array_sort/selection_sort_hw.sim/sim_1/behav/xsim/xsim.dir/counter_tb_behav/webtalk/xsim_webtalk.tcl -notrace

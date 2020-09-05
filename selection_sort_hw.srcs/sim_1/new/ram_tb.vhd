@@ -1,16 +1,16 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity register_tb is
+entity ram_tb is
     --
-end register_tb;
+end ram_tb;
 
-architecture arch of register_tb is
+architecture arch of ram_tb is
     signal clk, load, clear, dIn, dOut: std_logic;
     constant clk_period: time := 10 ns;
 
 begin
-    testbench: entity work.register_block(Behavioral)
+    testbench: entity work.ram_block(Behavioral)
     port map
     (
         clk => clk,
@@ -30,15 +30,6 @@ begin
     
     simulation: process
     begin
-        dIn <= '1';
-        
-        clear <= '1';
-        load <= '0';
-        wait for clk_period;
-        
-        clear <= '0';
-        load <= '1';
-        wait for clk_period;
         
         std.env.finish; -- stop simulation
     end process ;
