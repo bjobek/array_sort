@@ -193,7 +193,7 @@ begin
     port map(
             rst => rst,
             din => value_mux_dout,	
-            addr => to_integer(unsigned(addr_mux_dout)), -- type cast to natural
+            addr => to_integer(unsigned(addr_mux_dout)), -- type cast to natural/int
             wr => ram_wr,	
             clk	=> clk,
             dout => ram_dout
@@ -275,17 +275,15 @@ begin
              nxtst <= S3;
          end if;
       when S3 =>
-       
-     
-        
         nxtst <= S2;
       when S4 =>
          
           nxtst <= S5;
       when S5 =>
           
-          nxtst <= S1; 
+          nxtst <= S6; 
       when S6 =>
+          nxtst <= S1;
           
 
    end case;
@@ -303,18 +301,18 @@ begin
    smallest_index_reg_ld<='0';
    tmp_index_ctr_ld <='0';
    clr <= '0';
-   addr_mux_sel <= "10"; -- tmp_index_ctr
    ram_wr <= '0';
    
    case prest is 
       when S0=>
           clr <= '1';
           addr_mux_sel <= "10"; -- tmp_index_ctr
+          
       when S1=>
           current_val_reg_ld <= '1';
           smallest_val_reg_ld<= '1';
           smallest_index_reg_ld<='1';
-          tmp_index_ctr_ld <='1';
+          --tmp_index_ctr_ld <='1';
       when S2=>
       
       when S3=>
@@ -325,18 +323,22 @@ begin
          end if;
         
       when S4=>
-          addr_mux_sel <= "00";
-          value_mux_sel<= "00";
+          addr_mux_sel <= "00"; -- current_idx
+          value_mux_sel<= "00"; -- smallest val
           ram_wr<='1'; 
-      when S5=>
-          addr_mux_sel <= "01";
-          value_mux_sel<= "01";
-          ram_wr<='1';
           current_index_ctr_inc <= '1';
+
+      when S5=>
+          tmp_index_ctr_ld <='1';
+
+          addr_mux_sel <= "01"; -- smallest idx
+          value_mux_sel<= "01"; -- current val
+          ram_wr<='1';
           
       
       when S6=> 
-    
+          addr_mux_sel <= "10"; -- tmp_index_ctr
+
 
    end case;
 end process;
