@@ -68,6 +68,10 @@ begin
         rst <= '1';
         wait for clk_period*2;
         rst <='0';
+        wait for clk_period*1000;
+        rst <='1';
+        wait for clk_period;
+        rst <='0';
         wait;  
     end process;
 end Behavioral;

@@ -38,18 +38,7 @@ entity top_block is
        
         clk : in STD_LOGIC;
         rst : in STD_LOGIC
-        -- current index ctr
-        
-       -- tmp_index_ctr
-       -- 3:1 addr  mux
-       
-       -- 2:1 value mux
-       -- ram
-
-       -- smallest value register
-       -- current value register
-       -- smallest index register 
-       -- comparator 
+    
          );
 end top_block;
 
@@ -130,7 +119,7 @@ architecture Behavioral of top_block is
     signal value_mux_sel : std_logic_vector(1 downto 0);
    -- ram
    signal ram_wr : std_logic;
-   signal ram_addr : std_logic_vector(addr_width-1 downto 0);
+
    signal ram_dout : std_logic_vector(data_width-1 downto 0);
    -- smallest value register
    signal  smallest_val_reg_dout : std_logic_vector(data_width-1 downto 0);
@@ -300,6 +289,9 @@ begin
    smallest_val_reg_ld<= '0';
    smallest_index_reg_ld<='0';
    tmp_index_ctr_ld <='0';
+   current_index_ctr_ld <='0';
+   value_mux_sel<= "00"; -- smallest val
+
    clr <= '0';
    ram_wr <= '0';
    

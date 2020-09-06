@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_block_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="top_block_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="200749833333fs"></ZoomStartTime>
+      <ZoomEndTime time="201050033334fs"></ZoomEndTime>
+      <Cursor1Time time="201000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/top_block_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram">
+      <obj_property name="ElementShortName">ram[31:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram[31:0][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[31]">
+         <obj_property name="ElementShortName">[31][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[31][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[30]">
+         <obj_property name="ElementShortName">[30][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[30][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[29]">
+         <obj_property name="ElementShortName">[29][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[29][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[28]">
+         <obj_property name="ElementShortName">[28][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[28][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[27]">
+         <obj_property name="ElementShortName">[27][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[27][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[26]">
+         <obj_property name="ElementShortName">[26][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[26][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[25]">
+         <obj_property name="ElementShortName">[25][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[25][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[24]">
+         <obj_property name="ElementShortName">[24][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[23]">
+         <obj_property name="ElementShortName">[23][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[23][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[22]">
+         <obj_property name="ElementShortName">[22][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[22][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[21]">
+         <obj_property name="ElementShortName">[21][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[21][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[20]">
+         <obj_property name="ElementShortName">[20][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[20][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[19]">
+         <obj_property name="ElementShortName">[19][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[19][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[18]">
+         <obj_property name="ElementShortName">[18][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[18][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[17]">
+         <obj_property name="ElementShortName">[17][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[17][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[16]">
+         <obj_property name="ElementShortName">[16][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[16][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[15]">
+         <obj_property name="ElementShortName">[15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[14]">
+         <obj_property name="ElementShortName">[14][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[13]">
+         <obj_property name="ElementShortName">[13][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[12]">
+         <obj_property name="ElementShortName">[12][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[11]">
+         <obj_property name="ElementShortName">[11][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[10]">
+         <obj_property name="ElementShortName">[10][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[9]">
+         <obj_property name="ElementShortName">[9][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[8]">
+         <obj_property name="ElementShortName">[8][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[7]">
+         <obj_property name="ElementShortName">[7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[6]">
+         <obj_property name="ElementShortName">[6][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[5]">
+         <obj_property name="ElementShortName">[5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[4]">
+         <obj_property name="ElementShortName">[4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[3]">
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[2]">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[1]">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/top_block_tb/uut/ram/ram[0]">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_block_tb/uut/prest">
+      <obj_property name="ElementShortName">prest</obj_property>
+      <obj_property name="ObjectShortName">prest</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/top_block_tb/uut/nxtst">
+      <obj_property name="ElementShortName">nxtst</obj_property>
+      <obj_property name="ObjectShortName">nxtst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/clr">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/current_index_ctr_ld">
+      <obj_property name="ElementShortName">current_index_ctr_ld</obj_property>
+      <obj_property name="ObjectShortName">current_index_ctr_ld</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/current_index_ctr_dout">
+      <obj_property name="ElementShortName">current_index_ctr_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">current_index_ctr_dout[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/current_index_ctr_tick">
+      <obj_property name="ElementShortName">current_index_ctr_tick</obj_property>
+      <obj_property name="ObjectShortName">current_index_ctr_tick</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/current_index_ctr_inc">
+      <obj_property name="ElementShortName">current_index_ctr_inc</obj_property>
+      <obj_property name="ObjectShortName">current_index_ctr_inc</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/tmp_index_ctr_ld">
+      <obj_property name="ElementShortName">tmp_index_ctr_ld</obj_property>
+      <obj_property name="ObjectShortName">tmp_index_ctr_ld</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/tmp_index_ctr_inc">
+      <obj_property name="ElementShortName">tmp_index_ctr_inc</obj_property>
+      <obj_property name="ObjectShortName">tmp_index_ctr_inc</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/tmp_index_ctr_dout">
+      <obj_property name="ElementShortName">tmp_index_ctr_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">tmp_index_ctr_dout[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/tmp_index_ctr_tick">
+      <obj_property name="ElementShortName">tmp_index_ctr_tick</obj_property>
+      <obj_property name="ObjectShortName">tmp_index_ctr_tick</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/addr_mux_dout">
+      <obj_property name="ElementShortName">addr_mux_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_mux_dout[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/addr_mux_sel">
+      <obj_property name="ElementShortName">addr_mux_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_mux_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/value_mux_dout">
+      <obj_property name="ElementShortName">value_mux_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">value_mux_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/value_mux_sel">
+      <obj_property name="ElementShortName">value_mux_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">value_mux_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/ram_wr">
+      <obj_property name="ElementShortName">ram_wr</obj_property>
+      <obj_property name="ObjectShortName">ram_wr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/ram_dout">
+      <obj_property name="ElementShortName">ram_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/smallest_val_reg_dout">
+      <obj_property name="ElementShortName">smallest_val_reg_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">smallest_val_reg_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/smallest_val_reg_ld">
+      <obj_property name="ElementShortName">smallest_val_reg_ld</obj_property>
+      <obj_property name="ObjectShortName">smallest_val_reg_ld</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/current_val_reg_dout">
+      <obj_property name="ElementShortName">current_val_reg_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">current_val_reg_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/current_val_reg_ld">
+      <obj_property name="ElementShortName">current_val_reg_ld</obj_property>
+      <obj_property name="ObjectShortName">current_val_reg_ld</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_block_tb/uut/smallest_index_reg_dout">
+      <obj_property name="ElementShortName">smallest_index_reg_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">smallest_index_reg_dout[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/smallest_index_reg_ld">
+      <obj_property name="ElementShortName">smallest_index_reg_ld</obj_property>
+      <obj_property name="ObjectShortName">smallest_index_reg_ld</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_block_tb/uut/comp_out">
+      <obj_property name="ElementShortName">comp_out</obj_property>
+      <obj_property name="ObjectShortName">comp_out</obj_property>
+   </wvobject>
+</wave_config>
