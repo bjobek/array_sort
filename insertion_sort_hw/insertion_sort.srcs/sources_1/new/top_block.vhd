@@ -46,7 +46,7 @@ entity top_block is
     prev_i_din, curr_i_din : in std_logic_vector(addr_width-1 downto 0);
     prev_i_ld, curr_i_ld :in  std_logic;
     prev_v_ld, curr_v_ld :in  std_logic;
-    curr_i_tick : out  std_logic;
+   -- curr_i_tick : out  std_logic;
     curr_i_dec, prev_i_dec : in std_logic;
     
     prev_idx_dout , curr_idx_dout : out std_logic_vector(addr_width-1 downto 0)
