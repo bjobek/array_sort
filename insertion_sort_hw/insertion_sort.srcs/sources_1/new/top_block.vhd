@@ -47,7 +47,9 @@ entity top_block is
     prev_i_ld, curr_i_ld :in  std_logic;
     prev_v_ld, curr_v_ld :in  std_logic;
     curr_i_tick : out  std_logic;
-    curr_i_dec, prev_i_dec : in std_logic
+    curr_i_dec, prev_i_dec : in std_logic;
+    
+    prev_idx_dout , curr_idx_dout : out std_logic_vector(addr_width-1 downto 0)
 
          
          );
@@ -146,7 +148,7 @@ begin
     curr_i : counter_block
         generic map(addr_width)
         port map(
-                rst => rst, ld => curr_i_ld, dec => curr_i_dec, clk => clk, tick => curr_i_tick, din => curr_i_din,
+                rst => rst, ld => curr_i_ld, dec => curr_i_dec, clk => clk, tick => open, din => curr_i_din,
                 dout => curr_i_dout 
                 );
     prev_i : counter_block
@@ -172,5 +174,7 @@ begin
                dinA => curr_v_dout, dinB => prev_v_dout, dout => comp_out 
                 );   
 
+    prev_idx_dout <= prev_i_dout;
+    curr_idx_dout <= curr_i_dout;
 
 end Behavioral;
