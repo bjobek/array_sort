@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log top_block.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
+    with args -log control_path.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_path.tcl
 
 
 ****** Vivado v2019.1 (64-bit)
@@ -8,16 +8,19 @@
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source top_block.tcl -notrace
-Command: synth_design -top top_block -part xc7z010clg400-1
+source control_path.tcl -notrace
+Command: synth_design -top control_path -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7929 
+INFO: Helper process launched with PID 13847 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 125 ; free virtual = 4702
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 479 ; free virtual = 4574
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'control_path' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 5 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'top_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
@@ -62,22 +65,50 @@ INFO: [Synth 8-256] done synthesizing module 'comparator_block' (5#1) [/home/bjo
 WARNING: [Synth 8-3848] Net mux_value_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
 WARNING: [Synth 8-3848] Net mux_index_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
 INFO: [Synth 8-256] done synthesizing module 'top_block' (6#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
+WARNING: [Synth 8-614] signal 'curr_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
+WARNING: [Synth 8-614] signal 'prev_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
+WARNING: [Synth 8-614] signal 'PC' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
+WARNING: [Synth 8-614] signal 'PC_1' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
+WARNING: [Synth 8-3848] Net curr_val_reg_load in module/entity control_path does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:48]
+WARNING: [Synth 8-3848] Net prev_val_reg_load in module/entity control_path does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'control_path' (7#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 211 ; free virtual = 4725
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 511 ; free virtual = 4607
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 209 ; free virtual = 4723
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 513 ; free virtual = 4609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 209 ; free virtual = 4723
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 513 ; free virtual = 4609
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'pre_state_reg' in module 'control_path'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   s_rst |                              000 |                              000
+                   s_ld1 |                              001 |                              001
+                   s_ld2 |                              010 |                              010
+                  s_comp |                              011 |                              011
+                  s_swp1 |                              100 |                              100
+                  s_swp2 |                              101 |                              101
+                   s_inc |                              110 |                              111
+                   s_dec |                              111 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pre_state_reg' using encoding 'sequential' in module 'control_path'
+WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_1_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:78]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_index_control_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:66]
+WARNING: [Synth 8-327] inferring latch for variable 'prev_index_val_load_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_val_control_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:67]
+WARNING: [Synth 8-327] inferring latch for variable 'ram_wr_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'prev_index_val_dec_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:76]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1589.594 ; gain = 193.219 ; free physical = 185 ; free virtual = 4699
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1590.594 ; gain = 194.219 ; free physical = 470 ; free virtual = 4566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -91,7 +122,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 4     
 +---Registers : 
 	                8 Bit    Registers := 34    
 	                5 Bit    Registers := 3     
@@ -99,7 +130,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
+	   8 Input      5 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 36    
+	   8 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -107,6 +142,15 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module control_path 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
++---Muxes : 
+	   8 Input      5 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 8     
 Module mux_block 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -153,114 +197,26 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design top_block has unconnected port mux_value_sel
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[31][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[30][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[29][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[28][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[27][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[26][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[25][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[24][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[23][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[22][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[21][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[20][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[19][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[18][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[17][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[16][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[15][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[14][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[13][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[12][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[11][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[10][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[9][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[8][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[7][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[6][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[5][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[4][0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[3][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[2][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[1][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[31][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[30][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[29][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[28][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[27][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[26][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[25][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[24][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[23][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[22][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[21][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[20][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[19][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[18][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[17][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[16][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[15][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[14][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[13][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[12][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[11][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[10][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[9][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[8][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[7][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[6][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[5][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[4][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[3][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[2][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[1][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[31][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[30][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[29][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[28][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[27][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[26][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[25][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[24][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[23][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[22][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[21][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[20][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[19][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[18][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[17][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[16][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[15][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[14][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[13][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[12][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[11][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[10][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[9][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[8][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[7][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[6][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[5][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[4][2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[3][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[2][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[1][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[31][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[30][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ram/ram_reg[29][3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[28][3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[27][3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[26][3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[25][3] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[0]' (FDE) to 'ram/addr_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[1]' (FDE) to 'ram/addr_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[2]' (FDE) to 'ram/addr_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[3]' (FDE) to 'ram/addr_reg_reg[4]'
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[2]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[1]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[0]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_reg[4]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_reg[3]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_reg[2]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_reg[1]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_reg[0]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_1_reg[4]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_1_reg[3]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_1_reg[2]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_1_reg[1]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (PC_1_reg[0]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (mux_index_control_reg) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (prev_index_val_load_reg) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (mux_val_control_reg) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (ram_wr_reg) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (prev_index_val_dec_reg) is unused and will be removed from module control_path.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 140 ; free virtual = 4549
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 331 ; free virtual = 4429
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,7 +229,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 138 ; free virtual = 4546
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 329 ; free virtual = 4427
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,7 +241,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 138 ; free virtual = 4546
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 329 ; free virtual = 4427
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,7 +265,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -322,7 +278,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -334,25 +290,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -365,56 +321,37 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     1|
-|3     |LUT2   |     5|
-|4     |LUT3   |     6|
-|5     |LUT4   |     2|
-|6     |LUT5   |     4|
-|7     |LUT6   |     2|
-|8     |FDCE   |    12|
-|9     |FDPE   |     1|
-|10    |IBUF   |    19|
-|11    |OBUF   |    11|
-+------+-------+------+
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
 
 Report Instance Areas: 
-+------+---------+-----------------+------+
-|      |Instance |Module           |Cells |
-+------+---------+-----------------+------+
-|1     |top      |                 |    64|
-|2     |  curr_i |counter_block    |    12|
-|3     |  prev_i |counter_block_0  |    12|
-|4     |  comp   |comparator_block |     2|
-|5     |  curr_v |register_block   |     1|
-|6     |  prev_v |register_block_1 |     2|
-|7     |  ram    |single_port_ram  |     4|
-+------+---------+-----------------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 139 ; free virtual = 4548
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.953 ; gain = 309.570 ; free physical = 139 ; free virtual = 4548
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.977 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.551 ; gain = 0.000 ; free physical = 137 ; free virtual = 4470
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.594 ; gain = 0.000 ; free physical = 246 ; free virtual = 4344
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-136 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1813.551 ; gain = 417.273 ; free physical = 235 ; free virtual = 4568
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.551 ; gain = 0.000 ; free physical = 235 ; free virtual = 4568
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1781.594 ; gain = 385.316 ; free physical = 345 ; free virtual = 4443
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.594 ; gain = 0.000 ; free physical = 345 ; free virtual = 4443
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/top_block.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file top_block_utilization_synth.rpt -pb top_block_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 15:42:29 2020...
+INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/control_path.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file control_path_utilization_synth.rpt -pb control_path_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 16:20:21 2020...

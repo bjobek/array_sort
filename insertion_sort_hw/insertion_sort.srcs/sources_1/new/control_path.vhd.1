@@ -1,12 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
 entity control_path is
-    generic(
-        data_width : integer := 8;
-        addr_width : integer := 5
-    );
     port
     (
         clk: in std_logic;
@@ -19,20 +14,20 @@ architecture Behavioral of control_path is
     signal pre_state, nxt_state: state;  -- present state, next state
 
     -- program counter
-    signal PC: unsigned(addr_width-1 downto 0);
-    signal PC_1 : unsigned(addr_width-1 downto 0);
+    signal PC: std_logic;
 
     -- curr_index_val counter
     signal curr_index_val_load: std_logic;
     signal curr_index_val_reset: std_logic;
     signal curr_index_val_dec: std_logic;
-    signal curr_index_val_data: std_logic_vector(addr_width-1 downto 0);
+    signal curr_index_val_tick: std_logic;
+    signal curr_index_val_data: std_logic;
 
     -- prev_index_val counter
     signal prev_index_val_load: std_logic;
     signal prev_index_val_reset: std_logic;
     signal prev_index_val_dec: std_logic;
-    signal prev_index_val_data: std_logic_vector(addr_width-1 downto 0);
+    signal prev_index_val_data: std_logic;
 
     -- mux_index
     signal mux_index_control: std_logic;
@@ -57,7 +52,6 @@ architecture Behavioral of control_path is
 
 begin
     top: entity work.top_block(Behavioral)
-    generic map(data_width => 8, addr_width => 5)
     port map
     (
         clk => clk,
@@ -70,26 +64,26 @@ begin
         curr_i_ld => curr_index_val_load,
         prev_v_ld => prev_val_reg_load,
         curr_v_ld => curr_val_reg_load,
+        curr_i_tick => curr_index_val_tick,
         prev_idx_dout => prev_index_val_data,
         curr_idx_dout => curr_index_val_data,
-        curr_i_dec => curr_index_val_dec,
-        prev_i_dec => prev_index_val_dec,
-        curr_i_din => std_logic_vector(PC), -- feil
-        prev_i_din => std_logic_vector((PC_1)) -- feil
+
+        curr_i_din => PC, -- feil
+        prev_i_din => (PC-1) -- feil
     );
 
     -- state register
     process (clk, rst)
     begin
         if (rst = '1') then
-            pre_state <= S_RST; -- initial state
+            pre_state <= S0; -- initial state
         elsif rising_edge(clk) then
             pre_state <= nxt_state;
         end if;
     end process;
 
     -- next-state logic
-    process (pre_state, comp)
+    process (pre_state, curr_index_val_tick, comp)
     begin
         nxt_state <= pre_state; -- stay in current state by default
 
@@ -98,7 +92,7 @@ begin
                 nxt_state <= S_LD1;
 
             when S_LD1 =>
-                if (unsigned(curr_index_val_data) = (data_width**2-1)) then
+                if (curr_index_val_tick = '1') then
                     nxt_state <= S_RST;
                 else
                     nxt_state <= S_LD2;
@@ -110,7 +104,7 @@ begin
             when S_COMP =>
                 if comp = '1' then
                     nxt_state <= S_SWP1;
-                elsif unsigned(prev_index_val_data) = "0" then
+                elsif prev_index_val_data = '0' then
                     nxt_state <= S_INC;
                 else
                     nxt_state <= S_DEC;
@@ -131,18 +125,17 @@ begin
     end process;
 
     -- Moore outputs logic 
-    process (pre_state)
+    process (pre_state, _din_, _din_, ...)
     begin
         -- Init values
         curr_index_val_load <= '0';
         curr_index_val_reset <= '0';
-        curr_index_val_dec <= '0';
-  
+        curr_index_val_inc <= '0';
+        curr_index_val_tick <= '0';
 
         case pre_state is 
             when S_RST =>
-                PC <= "00001";
-                PC_1<="00000";
+                PC <= '1';
                 ram_reset <= '1';
 
             when S_LD1 =>
@@ -167,7 +160,6 @@ begin
 
             when S_INC =>
                 PC <= unsigned(PC + 1); -- feil
-                PC_1 <= unsigned(PC_1 + 1);
 
             when S_DEC =>
                 curr_index_val_dec <= '1';

@@ -31,11 +31,12 @@ set_property ip_output_repo /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertio
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd
+  /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd
   /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd
   /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd
   /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd
   /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd
-  /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd
+  /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,12 +49,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top top_block -part xc7z010clg400-1
+synth_design -top control_path -part xc7z010clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef top_block.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file top_block_utilization_synth.rpt -pb top_block_utilization_synth.pb"
+write_checkpoint -force -noxdef control_path.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file control_path_utilization_synth.rpt -pb control_path_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
