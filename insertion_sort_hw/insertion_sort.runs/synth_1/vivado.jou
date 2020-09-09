@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep  9 13:49:29 2020
+# Process ID: 23509
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1
+# Command line: vivado -log top_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/top_block.vds
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_block.tcl -notrace

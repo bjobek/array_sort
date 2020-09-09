@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_block'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sim_1/new/mux_block_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux_block_tb'

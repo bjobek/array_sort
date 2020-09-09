@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09/03/2020 08:37:45 AM
+-- Create Date: 09/09/2020 01:32:17 PM
 -- Design Name: 
--- Module Name: counter_block - Behavioral
+-- Module Name: counter_block_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -31,7 +31,14 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity counter_block is
+entity counter_block_tb is
+--  Port ( );
+end counter_block_tb;
+
+architecture Behavioral of counter_block_tb is
+
+
+component counter_block is
     generic(
            width : integer 
            );
@@ -42,40 +49,37 @@ entity counter_block is
            tick : out std_logic;
            din : in STD_LOGIC_VECTOR(width-1 downto 0);
            dout : out STD_LOGIC_VECTOR(width-1 downto 0));
-end counter_block;
+end component;
 
-architecture Behavioral of counter_block is
-    signal count_u : unsigned(width-1 downto 0);
+constant clock_period : time := 10 ns;
+signal rst, ld, dec, clk, tick : std_logic;
+signal din, dout : std_logic_vector(3 downto 0);
+
 begin
-    process(clk)
-    begin
-        if(rst = '1') then
-
-            count_u <= (others=>'0');
-          --  tick<='0';
-        elsif(rising_edge(clk)) then
-            tick <= '0';
-           if(count_u = 2**width-1) then
-                   tick <= '1';
-            end if;
-                    
-                if(ld = '1') then
-                count_u <= unsigned(din);
-                end if;
-                if(dec = '1') then
-                
-               
-                    
-                
-                    count_u <= (count_u - 1);
-                end if;
-            end if;    
-       
+    uut: counter_block
+    generic map(4)
+    port map(rst => rst, ld => ld, dec => dec, clk => clk, tick => tick, din => din, dout => dout);
+    process
+    begin 
+        clk <= '0';
+        wait for clock_period/2;
+        clk <= '1';
+        wait for clock_period/2;
     end process;
-    
-   
-    
-    dout <= STD_LOGIC_VECTOR(count_u);
-    
-    
+
+    process
+    begin
+        rst <='1';
+        dec <='0';
+        ld <='0';
+        wait for clock_period;
+        rst <='0';
+        wait for clock_period;
+        din <= "1111";
+        ld<='1';
+        wait for clock_period;
+        ld <='0';
+        dec<='1';
+        wait for clock_period*100;
+    end process;
 end Behavioral;
