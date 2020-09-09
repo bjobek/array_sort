@@ -14,70 +14,70 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23529 
+INFO: Helper process launched with PID 7929 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1515.449 ; gain = 120.621 ; free physical = 221 ; free virtual = 4967
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 125 ; free virtual = 4702
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'top_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_index' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:123]
+INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_index' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:125]
 INFO: [Synth 8-638] synthesizing module 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mux_block' (1#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_value' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:130]
+INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_value' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:132]
 INFO: [Synth 8-638] synthesizing module 'mux_block__parameterized1' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mux_block__parameterized1' (1#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'single_port_ram' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:24' bound to instance 'ram' of component 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:137]
+INFO: [Synth 8-3491] module 'single_port_ram' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:24' bound to instance 'ram' of component 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:41]
 	Parameter addr_width bound to: 5 - type: integer 
 	Parameter data_width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'single_port_ram' (2#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:41]
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'curr_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:146]
+INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'curr_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:148]
 INFO: [Synth 8-638] synthesizing module 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:47]
 	Parameter width bound to: 5 - type: integer 
 WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'counter_block' (3#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:47]
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'prev_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:152]
+INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'prev_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:154]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'curr_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:158]
+INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'curr_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:160]
 INFO: [Synth 8-638] synthesizing module 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:45]
 	Parameter width bound to: 8 - type: integer 
 WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'register_block' (4#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:45]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'prev_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:164]
+INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'prev_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:166]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'comparator_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:33' bound to instance 'comp' of component 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:169]
+INFO: [Synth 8-3491] module 'comparator_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:33' bound to instance 'comp' of component 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:171]
 INFO: [Synth 8-638] synthesizing module 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:42]
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'comparator_block' (5#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:42]
-WARNING: [Synth 8-3848] Net mux_value_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:119]
-WARNING: [Synth 8-3848] Net mux_index_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:119]
-INFO: [Synth 8-256] done synthesizing module 'top_block' (6#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:56]
+WARNING: [Synth 8-3848] Net mux_value_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
+WARNING: [Synth 8-3848] Net mux_index_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
+INFO: [Synth 8-256] done synthesizing module 'top_block' (6#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.199 ; gain = 174.371 ; free physical = 247 ; free virtual = 4994
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 211 ; free virtual = 4725
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1575.137 ; gain = 180.309 ; free physical = 247 ; free virtual = 4994
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 209 ; free virtual = 4723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1583.141 ; gain = 188.312 ; free physical = 247 ; free virtual = 4994
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 209 ; free virtual = 4723
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1600.055 ; gain = 205.227 ; free physical = 219 ; free virtual = 4967
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1589.594 ; gain = 193.219 ; free physical = 185 ; free virtual = 4699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -98,7 +98,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 36    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -130,7 +130,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 Module register_block 
 Detailed RTL Component Info : 
@@ -255,12 +255,12 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[26][3] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ram/ram_reg[25][3] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[0]' (FDE) to 'ram/addr_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[1]' (FDE) to 'ram/addr_reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[2]' (FDE) to 'ram/addr_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[0]' (FDE) to 'ram/addr_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[1]' (FDE) to 'ram/addr_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[2]' (FDE) to 'ram/addr_reg_reg[4]'
 INFO: [Synth 8-3886] merging instance 'ram/addr_reg_reg[3]' (FDE) to 'ram/addr_reg_reg[4]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 140 ; free virtual = 4549
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,7 +273,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4813
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 138 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,7 +285,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4813
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 138 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,7 +309,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -322,7 +322,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -334,25 +334,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -370,52 +370,51 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     1|
-|3     |LUT1   |     1|
-|4     |LUT2   |     5|
-|5     |LUT3   |     3|
-|6     |LUT4   |     1|
-|7     |LUT5   |     3|
-|8     |LUT6   |     3|
-|9     |FDCE   |     7|
-|10    |FDPE   |     1|
-|11    |FDRE   |     1|
-|12    |IBUF   |    12|
-|13    |OBUF   |     2|
+|3     |LUT2   |     5|
+|4     |LUT3   |     6|
+|5     |LUT4   |     2|
+|6     |LUT5   |     4|
+|7     |LUT6   |     2|
+|8     |FDCE   |    12|
+|9     |FDPE   |     1|
+|10    |IBUF   |    19|
+|11    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-----------------+------+
 |      |Instance |Module           |Cells |
 +------+---------+-----------------+------+
-|1     |top      |                 |    41|
-|2     |  comp   |comparator_block |     2|
-|3     |  curr_i |counter_block    |    17|
-|4     |  curr_v |register_block   |     1|
-|5     |  prev_v |register_block_0 |     2|
-|6     |  ram    |single_port_ram  |     4|
+|1     |top      |                 |    64|
+|2     |  curr_i |counter_block    |    12|
+|3     |  prev_i |counter_block_0  |    12|
+|4     |  comp   |comparator_block |     2|
+|5     |  curr_v |register_block   |     1|
+|6     |  prev_v |register_block_1 |     2|
+|7     |  ram    |single_port_ram  |     4|
 +------+---------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 137 ; free virtual = 4814
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 137 ; free virtual = 4546
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.500 ; gain = 312.672 ; free physical = 140 ; free virtual = 4817
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1707.508 ; gain = 312.672 ; free physical = 140 ; free virtual = 4817
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.945 ; gain = 309.570 ; free physical = 139 ; free virtual = 4548
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1705.953 ; gain = 309.570 ; free physical = 139 ; free virtual = 4548
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.168 ; gain = 0.000 ; free physical = 134 ; free virtual = 4743
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.551 ; gain = 0.000 ; free physical = 137 ; free virtual = 4470
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 136 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1813.168 ; gain = 418.438 ; free physical = 232 ; free virtual = 4842
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.168 ; gain = 0.000 ; free physical = 232 ; free virtual = 4842
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1813.551 ; gain = 417.273 ; free physical = 235 ; free virtual = 4568
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1813.551 ; gain = 0.000 ; free physical = 235 ; free virtual = 4568
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/top_block.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_utilization_synth.rpt -pb top_block_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 13:49:50 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 15:42:29 2020...
