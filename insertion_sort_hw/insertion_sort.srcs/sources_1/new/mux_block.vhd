@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09/09/2020 10:51:41 AM
+-- Create Date: 09/03/2020 08:37:45 AM
 -- Design Name: 
--- Module Name: control_path - Behavioral
+-- Module Name: mux_block - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,15 +31,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity control_path is
---  Port ( );
-end control_path;
+entity mux_block is
+    generic(
+        width :  integer
+    );
+    Port ( dinA : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dinB : in STD_LOGIC_VECTOR(width-1 downto 0);
+           sel  : in std_logic;
+           dout : out STD_LOGIC_VECTOR(width-1 downto 0));
+end mux_block;
 
-architecture Behavioral of control_path is
+architecture Behavioral of mux_block is
 
-    type state is (S_RST, S_LD_1, S_LD_2, S_COMP, S_SWP_1, S_SWP_2, S_DEC);
-    signal prest, nxtst: state;  -- present state, next state
 begin
-
+    with sel select dout <=
+        dinA when '0',
+        dinB when others;
 
 end Behavioral;

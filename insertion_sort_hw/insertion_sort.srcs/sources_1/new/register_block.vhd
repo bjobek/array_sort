@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09/09/2020 10:51:41 AM
+-- Create Date: 09/03/2020 08:37:45 AM
 -- Design Name: 
--- Module Name: control_path - Behavioral
+-- Module Name: register_block - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,15 +31,32 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity control_path is
---  Port ( );
-end control_path;
+entity register_block is
+    Generic(
+            width : integer
+            );
+    Port ( rst : in STD_LOGIC;
+           ld : in STD_LOGIC;
+            clk : in STD_LOGIC;
+           din : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dout : out STD_LOGIC_VECTOR(width-1 downto 0));
+end register_block;
 
-architecture Behavioral of control_path is
+architecture Behavioral of register_block is
 
-    type state is (S_RST, S_LD_1, S_LD_2, S_COMP, S_SWP_1, S_SWP_2, S_DEC);
-    signal prest, nxtst: state;  -- present state, next state
 begin
+
+    process(clk)
+    begin
+        if(rst = '1') then
+            dout <= (others=>'0');
+        elsif(rising_edge(clk)) then
+            if(ld = '1') then
+                dout <= din;
+            end if;
+        end if;
+
+    end process;
 
 
 end Behavioral;

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09/09/2020 10:51:41 AM
+-- Create Date: 09/03/2020 08:38:48 AM
 -- Design Name: 
--- Module Name: control_path - Behavioral
+-- Module Name: comparator_block - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.NUMERIC_STD.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -30,16 +30,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
+entity comparator_block is
+ generic(
+       M: integer := 8        -- data width 
+          ); 
+    Port ( dinA : in STD_LOGIC_VECTOR(M-1 downto 0);
+           dinB : in STD_LOGIC_VECTOR(M-1 downto 0);
+           dout : out STD_LOGIC);
+end comparator_block;
 
-entity control_path is
---  Port ( );
-end control_path;
+architecture Behavioral of comparator_block is
+signal dinA_u, dinB_u : unsigned(M-1 downto 0);
 
-architecture Behavioral of control_path is
-
-    type state is (S_RST, S_LD_1, S_LD_2, S_COMP, S_SWP_1, S_SWP_2, S_DEC);
-    signal prest, nxtst: state;  -- present state, next state
 begin
+    dinA_u <= unsigned(dinA);
+    dinB_u <= unsigned(dinB);
+
+    process(dinA_u,dinB_u)
+    begin
+        if(dinA_u < dinB_u) then
+            dout <= '1';
+        else
+            dout <='0';
+        end if;
+    end process;
 
 
 end Behavioral;
