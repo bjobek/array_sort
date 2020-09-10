@@ -118,7 +118,8 @@ architecture Behavioral of top_block is
     
     signal prev_v_dout, curr_v_dout : std_logic_vector(data_width-1 downto 0);
     signal prev_i_dout, curr_i_dout : std_logic_vector(addr_width-1 downto 0);
-    signal mux_index_dout, mux_value_dout : std_logic_vector(data_width-1 downto 0);
+    signal mux_index_dout : std_logic_vector(addr_width-1 downto 0);
+    signal mux_value_dout : std_logic_vector(data_width-1 downto 0);
         
 
 begin
@@ -127,14 +128,17 @@ begin
         port map(
                 dinA => curr_i_dout, 
                 dinB => prev_i_dout,
-                sel => mux_index_sel
+                sel => mux_index_sel,
+                dout => mux_index_dout
+
                 );
     mux_value : mux_block
         generic map (data_width)
         port map(
                 dinA => curr_v_dout, 
                 dinB => prev_v_dout,
-                sel => mux_value_sel
+                sel => mux_value_sel,
+                dout => mux_value_dout
                 );
     ram : single_port_ram
         generic map(

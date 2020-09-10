@@ -1,0 +1,272 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 10 11:41:40 2020
+# Process ID: 4808
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting
+# Command line: vivado
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/vivado.log
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_path_tb_behav -key {Behavioral:sim_1:Functional:control_path_tb} -tclbatch {control_path_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source control_path_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_path_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 6573.113 ; gain = 106.832 ; free physical = 1414 ; free virtual = 5576
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6579.367 ; gain = 5.000 ; free physical = 1402 ; free virtual = 5564
+run 1000 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_path'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=8)\]
+Compiling architecture rtl of entity xil_defaultlib.single_port_ram [single_port_ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter_block [\counter_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_block [\comparator_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.top_block [top_block_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path [control_path_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path_tb
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 6642.301 ; gain = 27.008 ; free physical = 1360 ; free virtual = 5536
+run 1000 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_path'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=8)\]
+Compiling architecture rtl of entity xil_defaultlib.single_port_ram [single_port_ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter_block [\counter_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_block [\comparator_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.top_block [top_block_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path [control_path_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path_tb
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6658.309 ; gain = 16.008 ; free physical = 1344 ; free virtual = 5530
+run 1000 us
+run 1000 us
+run 10000 us
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6658.309 ; gain = 0.000 ; free physical = 1139 ; free virtual = 5524
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_path'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=8)\]
+Compiling architecture rtl of entity xil_defaultlib.single_port_ram [single_port_ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter_block [\counter_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_block [\comparator_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.top_block [top_block_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path [control_path_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path_tb
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 6679.320 ; gain = 21.012 ; free physical = 1360 ; free virtual = 5531
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_path'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=8)\]
+Compiling architecture rtl of entity xil_defaultlib.single_port_ram [single_port_ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter_block [\counter_block(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_block [\comparator_block(width=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.top_block [top_block_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path [control_path_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_path_tb
+Built simulation snapshot control_path_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 6682.320 ; gain = 3.000 ; free physical = 1345 ; free virtual = 5521
+run 10000 us
+save_wave_config {/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg
+set_property xsim.view /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 10 11:58:58 2020...

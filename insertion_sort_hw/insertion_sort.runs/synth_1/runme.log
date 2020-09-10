@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13847 
+INFO: Helper process launched with PID 16033 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 479 ; free virtual = 4574
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 417 ; free virtual = 4057
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'control_path' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
 	Parameter data_width bound to: 8 - type: integer 
@@ -25,90 +25,81 @@ INFO: [Synth 8-638] synthesizing module 'top_block' [/home/bjorn/Desktop/Lekekas
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_index' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:125]
+INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_index' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:126]
 INFO: [Synth 8-638] synthesizing module 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mux_block' (1#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_value' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:132]
+INFO: [Synth 8-3491] module 'mux_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:34' bound to instance 'mux_value' of component 'mux_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:135]
 INFO: [Synth 8-638] synthesizing module 'mux_block__parameterized1' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mux_block__parameterized1' (1#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/mux_block.vhd:44]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'single_port_ram' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:24' bound to instance 'ram' of component 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:139]
+INFO: [Synth 8-3491] module 'single_port_ram' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:24' bound to instance 'ram' of component 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'single_port_ram' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:41]
 	Parameter addr_width bound to: 5 - type: integer 
 	Parameter data_width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'single_port_ram' (2#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/ram_block.vhd:41]
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'curr_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:148]
+INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'curr_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:47]
 	Parameter width bound to: 5 - type: integer 
 WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'counter_block' (3#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:47]
 	Parameter width bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'prev_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:154]
+INFO: [Synth 8-3491] module 'counter_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/counter_block.vhd:34' bound to instance 'prev_i' of component 'counter_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:158]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'curr_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:160]
+INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'curr_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:164]
 INFO: [Synth 8-638] synthesizing module 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:45]
 	Parameter width bound to: 8 - type: integer 
 WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'register_block' (4#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:45]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'prev_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:166]
+INFO: [Synth 8-3491] module 'register_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/register_block.vhd:34' bound to instance 'prev_v' of component 'register_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:170]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'comparator_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:33' bound to instance 'comp' of component 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:171]
+INFO: [Synth 8-3491] module 'comparator_block' declared at '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:33' bound to instance 'comp' of component 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:175]
 INFO: [Synth 8-638] synthesizing module 'comparator_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:42]
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'comparator_block' (5#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:42]
-WARNING: [Synth 8-3848] Net mux_value_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
-WARNING: [Synth 8-3848] Net mux_index_dout in module/entity top_block does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:121]
 INFO: [Synth 8-256] done synthesizing module 'top_block' (6#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
 WARNING: [Synth 8-614] signal 'curr_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
 WARNING: [Synth 8-614] signal 'prev_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
 WARNING: [Synth 8-614] signal 'PC' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
 WARNING: [Synth 8-614] signal 'PC_1' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
-WARNING: [Synth 8-3848] Net curr_val_reg_load in module/entity control_path does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:48]
-WARNING: [Synth 8-3848] Net prev_val_reg_load in module/entity control_path does not have driver. [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'control_path' (7#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 511 ; free virtual = 4607
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 441 ; free virtual = 4081
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 513 ; free virtual = 4609
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 440 ; free virtual = 4080
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 513 ; free virtual = 4609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 440 ; free virtual = 4080
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'pre_state_reg' in module 'control_path'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                   s_rst |                              000 |                              000
-                   s_ld1 |                              001 |                              001
-                   s_ld2 |                              010 |                              010
-                  s_comp |                              011 |                              011
-                  s_swp1 |                              100 |                              100
-                  s_swp2 |                              101 |                              101
-                   s_inc |                              110 |                              111
-                   s_dec |                              111 |                              110
+                   s_rst |                         00000001 |                              000
+                   s_ld1 |                         00000010 |                              001
+                   s_ld2 |                         00000100 |                              010
+                  s_comp |                         00001000 |                              011
+                  s_swp1 |                         00010000 |                              100
+                  s_swp2 |                         00100000 |                              101
+                   s_inc |                         01000000 |                              111
+                   s_dec |                         10000000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'pre_state_reg' using encoding 'sequential' in module 'control_path'
+INFO: [Synth 8-3354] encoded FSM with state register 'pre_state_reg' using encoding 'one-hot' in module 'control_path'
 WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:77]
 WARNING: [Synth 8-327] inferring latch for variable 'PC_1_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:78]
-WARNING: [Synth 8-327] inferring latch for variable 'mux_index_control_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:66]
-WARNING: [Synth 8-327] inferring latch for variable 'prev_index_val_load_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:69]
-WARNING: [Synth 8-327] inferring latch for variable 'mux_val_control_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:67]
-WARNING: [Synth 8-327] inferring latch for variable 'ram_wr_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:68]
-WARNING: [Synth 8-327] inferring latch for variable 'prev_index_val_dec_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:76]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1590.594 ; gain = 194.219 ; free physical = 470 ; free virtual = 4566
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1597.602 ; gain = 201.227 ; free physical = 399 ; free virtual = 4042
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,13 +119,12 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
 	   8 Input      5 Bit        Muxes := 2     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 36    
-	   8 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -147,10 +137,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      5 Bit       Adders := 2     
 +---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
 	   8 Input      5 Bit        Muxes := 2     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 3     
 Module mux_block 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -197,9 +187,14 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[2]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[1]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_pre_state_reg[0]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[7]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[6]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[5]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[4]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[3]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[2]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[1]) is unused and will be removed from module control_path.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[0]) is unused and will be removed from module control_path.
 WARNING: [Synth 8-3332] Sequential element (PC_reg[4]) is unused and will be removed from module control_path.
 WARNING: [Synth 8-3332] Sequential element (PC_reg[3]) is unused and will be removed from module control_path.
 WARNING: [Synth 8-3332] Sequential element (PC_reg[2]) is unused and will be removed from module control_path.
@@ -210,13 +205,8 @@ WARNING: [Synth 8-3332] Sequential element (PC_1_reg[3]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (PC_1_reg[2]) is unused and will be removed from module control_path.
 WARNING: [Synth 8-3332] Sequential element (PC_1_reg[1]) is unused and will be removed from module control_path.
 WARNING: [Synth 8-3332] Sequential element (PC_1_reg[0]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (mux_index_control_reg) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (prev_index_val_load_reg) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (mux_val_control_reg) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (ram_wr_reg) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (prev_index_val_dec_reg) is unused and will be removed from module control_path.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 331 ; free virtual = 4429
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 220 ; free virtual = 3892
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -229,7 +219,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 329 ; free virtual = 4427
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 218 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,7 +231,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 329 ; free virtual = 4427
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 217 ; free virtual = 3890
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,7 +255,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -278,7 +268,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,25 +280,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -333,25 +323,25 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.969 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1695.977 ; gain = 299.594 ; free physical = 330 ; free virtual = 4428
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.016 ; gain = 302.633 ; free physical = 220 ; free virtual = 3890
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.594 ; gain = 0.000 ; free physical = 246 ; free virtual = 4344
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.602 ; gain = 0.000 ; free physical = 125 ; free virtual = 3811
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1781.594 ; gain = 385.316 ; free physical = 345 ; free virtual = 4443
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.594 ; gain = 0.000 ; free physical = 345 ; free virtual = 4443
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1781.602 ; gain = 385.324 ; free physical = 223 ; free virtual = 3909
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.602 ; gain = 0.000 ; free physical = 223 ; free virtual = 3909
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/control_path.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file control_path_utilization_synth.rpt -pb control_path_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 16:20:21 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 10 09:54:44 2020...

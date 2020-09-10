@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep 10 11:41:40 2020
+# Process ID: 4808
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting
+# Command line: vivado
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/vivado.log
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source control_path_tb.tcl
+relaunch_sim
+run 1000 us
+relaunch_sim
+run 1000 us
+relaunch_sim
+run 1000 us
+run 1000 us
+run 10000 us
+relaunch_sim
+relaunch_sim
+run 10000 us
+save_wave_config {/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg
+set_property xsim.view /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg [get_filesets sim_1]
+close_sim

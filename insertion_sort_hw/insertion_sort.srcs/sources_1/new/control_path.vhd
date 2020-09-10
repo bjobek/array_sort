@@ -15,7 +15,7 @@ entity control_path is
 end control_path;
 
 architecture Behavioral of control_path is
-    type state is (S_RST, S_LD1, S_LD2, S_COMP, S_SWP1, S_SWP2, S_DEC, S_INC);
+    type state is (S_RST, S_LD1, S_LD2, S_COMP, S_SWP1, S_SWP2, S_DEC_1,S_DEC_2, S_INC,S_STP);
     signal pre_state, nxt_state: state;  -- present state, next state
 
     -- program counter
@@ -66,6 +66,7 @@ begin
         mux_index_sel => mux_index_control,
         mux_value_sel => mux_val_control,
         ram_wr => ram_wr,
+       
         prev_i_ld => prev_index_val_load,
         curr_i_ld => curr_index_val_load,
         prev_v_ld => prev_val_reg_load,
@@ -94,35 +95,46 @@ begin
         nxt_state <= pre_state; -- stay in current state by default
 
         case pre_state is
+            when S_STP =>
+                nxt_state <= S_STP;
+        
             when S_RST =>
                 nxt_state <= S_LD1;
+                
 
             when S_LD1 =>
-                if (unsigned(curr_index_val_data) = (data_width**2-1)) then
-                    nxt_state <= S_RST;
-                else
+               
                     nxt_state <= S_LD2;
-                end if;
             
             when S_LD2 =>
-                nxt_state <= S_COMP;
-            
+                if (unsigned(prev_index_val_data) = ("11111")) then
+                    nxt_state <= S_STP;
+                else
+                    nxt_state <= S_COMP;
+                end if;            
             when S_COMP =>
                 if comp = '1' then
                     nxt_state <= S_SWP1;
-                elsif unsigned(prev_index_val_data) = "0" then
+                elsif unsigned(prev_index_val_data) = "00000" then
                     nxt_state <= S_INC;
                 else
-                    nxt_state <= S_DEC;
+                    nxt_state <= S_DEC_1;
                 end if;
             
             when S_SWP1 =>
                 nxt_state <= S_SWP2;
             
             when S_SWP2 =>
-                nxt_state <= S_COMP;
+                nxt_state <= S_DEC_1;
             
-            when S_DEC =>
+            when S_DEC_1 =>
+                if unsigned(prev_index_val_data) = "00000" then
+                nxt_state <= S_INC;
+                else
+                
+                nxt_state <= S_DEC_2;
+                end if;
+            when S_DEC_2 =>
                 nxt_state <= S_COMP;
 
             when S_INC =>
@@ -134,24 +146,44 @@ begin
     process (pre_state)
     begin
         -- Init values
+        ram_reset <= '0';
+
         curr_index_val_load <= '0';
         curr_index_val_reset <= '0';
         curr_index_val_dec <= '0';
+         prev_index_val_load <= '0';
+        prev_index_val_reset <= '0';
+        prev_index_val_dec <= '0';
+        ram_wr <='0';
+        mux_val_control <='0';
+        mux_index_control <='0';
+        curr_val_reg_load <='0';
+        prev_val_reg_load <='0';
+        curr_val_reg_clear <='0';
+        prev_val_reg_clear <='0';
   
 
         case pre_state is 
+            when S_STP =>
+            
             when S_RST =>
+                
                 PC <= "00001";
                 PC_1<="00000";
                 ram_reset <= '1';
+                curr_val_reg_clear<='1';
+                prev_val_reg_clear<='1';
 
             when S_LD1 =>
                 curr_index_val_load <= '1';
-                mux_index_control <= '0';
+                 prev_index_val_load <= '1';
+                prev_val_reg_load<='1';
+                mux_index_control <= '1'; -- prev
 
             when S_LD2 =>
-                prev_index_val_load <= '1';
-                mux_index_control <= '1';
+               
+               -- mux_index_control <= '1';
+                curr_val_reg_load <='1';
 
             when S_COMP =>
                -- there is no Moore logic in this state
@@ -168,10 +200,27 @@ begin
             when S_INC =>
                 PC <= unsigned(PC + 1); -- feil
                 PC_1 <= unsigned(PC_1 + 1);
+                prev_index_val_load<='1';
 
-            when S_DEC =>
-                curr_index_val_dec <= '1';
+            when S_DEC_1 =>
+                mux_index_control <='1';
+
+                
                 prev_index_val_dec <= '1';
+                 --prev_val_reg_load<='1';
+                 curr_val_reg_load <='1';
+            when S_DEC_2 =>
+                curr_index_val_dec <= '1';
+                mux_index_control <='1';
+
+                 prev_val_reg_load<='1';
+                -- curr_val_reg_load <='1';
+
+
+             --PC <= unsigned(PC -1 ); -- feil
+               -- PC_1 <= unsigned(PC_1 - 1);
+                
+
         end case;
     end process;
 

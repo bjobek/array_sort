@@ -74,11 +74,12 @@ begin
 			end if;
 			
 			-- Register the address for reading
-			addr_reg <= addr;
+			
 
 		end if;
 	
 	end process;
+	addr_reg <= addr;
 	dout <= ram(addr_reg);
 	
 end rtl;
