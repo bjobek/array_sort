@@ -43,14 +43,14 @@ entity top_block is
     mux_index_sel : in std_logic;
     mux_value_sel : in std_logic;
     ram_wr : in std_logic;
-    prev_i_din, curr_i_din : in std_logic_vector(addr_width-1 downto 0);
+    curr_i_rst, prev_i_rst : in std_logic;
     prev_i_ld, curr_i_ld :in  std_logic;
     prev_v_ld, curr_v_ld :in  std_logic;
     prev_i_tick : out  std_logic;
-    pc_ld, pc_inc : IN STD_LOGIC;
+    pc_ld, pc_dec : IN STD_LOGIC;
     pc_tick : out std_logic;
     curr_i_inc, prev_i_inc : in std_logic;
-    
+    pc_dout : out std_logic_vector(addr_width-1 downto 0);
     prev_idx_dout , curr_idx_dout : out std_logic_vector(addr_width-1 downto 0)
 
          
@@ -58,8 +58,19 @@ entity top_block is
 end top_block;
 
 architecture Behavioral of top_block is
-
-
+    component down_counter_block
+    generic(
+           width : integer 
+           );
+    Port ( rst : in STD_LOGIC;
+           ld : in STD_LOGIC;
+           dec : in STD_LOGIC;
+           clk : in STD_LOGIC;
+           tick : out std_logic;
+           din : in STD_LOGIC_VECTOR(width-1 downto 0);
+           dout : out STD_LOGIC_VECTOR(width-1 downto 0));
+           
+    end component;   
        
    component comparator_block is
             Generic(
@@ -122,7 +133,7 @@ architecture Behavioral of top_block is
     signal prev_i_dout, curr_i_dout : std_logic_vector(addr_width-1 downto 0);
     signal mux_index_dout : std_logic_vector(addr_width-1 downto 0);
     signal mux_value_dout : std_logic_vector(data_width-1 downto 0);
-    signal pc_dout : std_logic_vector(addr_width-1 downto 0);
+  --  signal pc_dout : std_logic_vector(addr_width-1 downto 0);
 
 begin
     mux_index : mux_block
@@ -154,20 +165,20 @@ begin
     curr_i : counter_block
         generic map(addr_width)
         port map(
-                rst => rst, ld => curr_i_ld, inc => curr_i_inc, clk => clk, tick => open, din => pc_dout,
+                rst => curr_i_rst, ld => curr_i_ld, inc => curr_i_inc, clk => clk, tick => open, din => (others=>'0'),
                 dout => curr_i_dout 
                 );
     prev_i : counter_block
         generic map(addr_width)
         port map(
-                rst => rst, ld => prev_i_ld, inc => prev_i_inc, clk => clk, tick => prev_i_tick, din => curr_i_din,
+                rst => prev_i_rst, ld => prev_i_ld, inc => prev_i_inc, clk => clk, tick => prev_i_tick, din => curr_i_dout,
                 dout => prev_i_dout 
                 );
                 
-    pc : counter_block
+    pc : down_counter_block
         generic map(addr_width)
         port map(
-                rst => rst, ld => pc_ld, inc => pc_inc, clk => clk, tick => pc_tick, din => (others=>'0'),
+                rst => rst, ld => pc_ld, dec => pc_dec, clk => clk, tick => pc_tick, din => (others=>'0'),
                 dout =>pc_dout 
                 );
                 
