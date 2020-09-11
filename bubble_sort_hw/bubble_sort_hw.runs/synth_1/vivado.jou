@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep 11 13:53:40 2020
-# Process ID: 27779
+# Start of session at: Fri Sep 11 14:14:54 2020
+# Process ID: 425
 # Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.runs/synth_1
 # Command line: vivado -log control_path.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_path.tcl
 # Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.runs/synth_1/control_path.vds

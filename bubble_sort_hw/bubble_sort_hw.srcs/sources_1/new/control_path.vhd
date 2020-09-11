@@ -109,6 +109,8 @@ end process;
 -- next-state logic
 process (prest, comp_out, pc_dout, prev_i_tick)
 begin
+      curr_i_rst <='0';
+        prev_i_rst <='0';
    nxtst <= prest; -- stay in current state by default
 
 
@@ -116,6 +118,8 @@ begin
       when S_STP =>
          
       when S_RST =>
+        curr_i_rst <='1';
+        prev_i_rst <='1';
         
       
         nxtst <= S_LD_1;
@@ -136,9 +140,9 @@ begin
        
        -- if(prev_i_tick = '1') then
         if(unsigned(prev_idx_dout) = unsigned(pc_dout )+1) then
-              curr_i_rst <='1';
-              prev_i_rst <='1';
-      
+          curr_i_rst <='1';
+        prev_i_rst <='1';
+            
             nxtst <= S_LD_1;
         elsif(comp_out = '1') then
             nxtst <= S_SWP_1;
@@ -158,8 +162,7 @@ end process;
 process (prest)
 begin
    -- rst <= '0';
-      curr_i_rst <='0';
-    prev_i_rst <='0';
+    
     mux_index_sel <= '0';
     mux_value_sel <= '0';
     ram_wr <= '0';
@@ -178,8 +181,7 @@ begin
       when S_STP =>
          
       when S_RST =>
-        curr_i_rst <='1';
-        prev_i_rst <='1';
+      
       when S_LD_1 =>
       --  curr_i_ld <= '1';
         prev_i_ld <='1';

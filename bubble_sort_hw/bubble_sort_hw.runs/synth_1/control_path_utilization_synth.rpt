@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Fri Sep 11 13:54:01 2020
+| Date         : Fri Sep 11 14:15:19 2020
 | Host         : bjornHPLaptop running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_utilization -file control_path_utilization_synth.rpt -pb control_path_utilization_synth.pb
 | Design       : control_path

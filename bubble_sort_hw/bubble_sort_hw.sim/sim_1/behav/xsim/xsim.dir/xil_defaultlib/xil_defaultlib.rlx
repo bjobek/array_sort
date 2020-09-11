@@ -4,7 +4,7 @@ May 24 2019
 14:51:52
 /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sim_1/new/control_path_tb.vhd,1599811793,vhdl,,,,control_path_tb,,,,,,,,
 /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/comparator_block.vhd,1599743596,vhdl,,,,comparator_block,,,,,,,,
-/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/control_path.vhd,1599825582,vhdl,,,,control_path,,,,,,,,
+/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/control_path.vhd,1599826054,vhdl,,,,control_path,,,,,,,,
 /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/counter_block.vhd,1599745816,vhdl,,,,counter_block,,,,,,,,
 /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/down_counter.vhd,1599822914,vhdl,,,,down_counter_block,,,,,,,,
 /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.srcs/sources_1/new/mux_block.vhd,1599743633,vhdl,,,,mux_block,,,,,,,,
