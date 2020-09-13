@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 13 21:11:54 2020
+# Process ID: 8606
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw
+# Command line: vivado
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.log
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /home/bjorn/Desktop/Lekekasse/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf

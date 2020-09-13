@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 13 21:11:54 2020
+# Process ID: 8606
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw
+# Command line: vivado
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.log
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6441.176 ; gain = 87.594 ; free physical = 900 ; free virtual = 7490
+update_compile_order -fileset sources_1
+close_project
+open_project /home/bjorn/Desktop/Lekekasse/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1663] The design 'design_1.bd' cannot be modified due to following reason(s):
+* Block design BD file is read-only. Please check file-permissions. 
+* Project is read-only. Please run 'save_project_as' before making any change to the bd-design. 
+* Block design BXML file is read-only. Please check file-permissions. 
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_ps7_0_axi_periph_0
+design_1_auto_pc_0
+design_1_rst_ps7_0_100M_0
+design_1_processing_system7_0_0
+design_1_axi_gpio_0_0
+
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
