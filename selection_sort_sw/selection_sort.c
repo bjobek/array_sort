@@ -2,6 +2,7 @@
 #include <sys/time.h>
 
 static const int length = 10;
+#define NANO_SECONDS 1000000000
 
 void print_list(int list[])
 {
@@ -57,8 +58,7 @@ int main()
     long microseconds = end.tv_usec - begin.tv_usec;
     double elapsed = seconds + microseconds*1e-6;
     
-    printf("Time measured: %.7f seconds.\n", elapsed);
-    printf("Time measured: %.0f nanoseconds.\n", elapsed*1000000000);
+    printf("Time measured: %.0f ns (%.7f s)\n", elapsed*NANO_SECONDS, elapsed);
     
     return 0;
 }
