@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/time.h>
 
 static const int length = 10;
 
@@ -38,6 +39,10 @@ void selection_sort(int list[])
 
 int main()
 {
+    // Start measuring time
+    struct timeval begin, end;
+    gettimeofday(&begin, 0);
+
     int list[] = {3, 7, 1, 3, 6, 4, 8, 9, 20, 2};
 
     printf("Unsorted list: ");
@@ -45,6 +50,15 @@ int main()
     selection_sort(list);
     printf("Sorted list: ");
     print_list(list);
+
+    // Stop measuring time and calculate the elapsed time
+    gettimeofday(&end, 0);
+    long seconds = end.tv_sec - begin.tv_sec;
+    long microseconds = end.tv_usec - begin.tv_usec;
+    double elapsed = seconds + microseconds*1e-6;
+    
+    printf("Time measured: %.7f seconds.\n", elapsed);
+    printf("Time measured: %.0f nanoseconds.\n", elapsed*1000000000);
     
     return 0;
 }
