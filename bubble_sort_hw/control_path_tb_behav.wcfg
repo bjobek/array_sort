@@ -10,9 +10,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="19583333fs"></ZoomStartTime>
-      <ZoomEndTime time="170083334fs"></ZoomEndTime>
-      <Cursor1Time time="145000000fs"></Cursor1Time>
+      <ZoomStartTime time="19829916667fs"></ZoomStartTime>
+      <ZoomEndTime time="19949716668fs"></ZoomEndTime>
+      <Cursor1Time time="19855000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="233"></NameColumnWidth>
@@ -38,14 +38,6 @@
    <wvobject type="logic" fp_name="/control_path_tb/uut/uut/ram_wr">
       <obj_property name="ElementShortName">ram_wr</obj_property>
       <obj_property name="ObjectShortName">ram_wr</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/control_path_tb/uut/uut/curr_i_rst">
-      <obj_property name="ElementShortName">curr_i_rst</obj_property>
-      <obj_property name="ObjectShortName">curr_i_rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/control_path_tb/uut/uut/prev_i_rst">
-      <obj_property name="ElementShortName">prev_i_rst</obj_property>
-      <obj_property name="ObjectShortName">prev_i_rst</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/control_path_tb/uut/uut/prev_i_ld">
       <obj_property name="ElementShortName">prev_i_ld</obj_property>
@@ -78,10 +70,6 @@
    <wvobject type="logic" fp_name="/control_path_tb/uut/uut/prev_i_inc">
       <obj_property name="ElementShortName">prev_i_inc</obj_property>
       <obj_property name="ObjectShortName">prev_i_inc</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/control_path_tb/uut/uut/pc_dout">
-      <obj_property name="ElementShortName">pc_dout[4:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_dout[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/control_path_tb/uut/uut/prev_idx_dout">
       <obj_property name="ElementShortName">prev_idx_dout[4:0]</obj_property>
@@ -338,6 +326,24 @@
       <obj_property name="ElementShortName">pc_tick</obj_property>
       <obj_property name="ObjectShortName">pc_tick</obj_property>
       <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/control_path_tb/uut/uut/curr_i_rst">
+      <obj_property name="ElementShortName">curr_i_rst</obj_property>
+      <obj_property name="ObjectShortName">curr_i_rst</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/control_path_tb/uut/uut/prev_i_rst">
+      <obj_property name="ElementShortName">prev_i_rst</obj_property>
+      <obj_property name="ObjectShortName">prev_i_rst</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/control_path_tb/uut/uut/pc_dout">
+      <obj_property name="ElementShortName">pc_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_dout[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#A52A2A</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/control_path_tb/uut/uut/mux_index_dout">

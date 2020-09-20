@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1'
+HD_PWD='/home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top_block.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
+EAStep vivado -log top_block_tmp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_tmp.tcl

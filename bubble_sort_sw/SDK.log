@@ -51,3 +51,4 @@ con
 ----------------End of Script----------------
 
 21:20:32 INFO  : Launch script is exported to file '/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_bubble_sort_sw.elf_on_local.tcl'
+12:15:45 INFO  : Disconnected from the channel tcfchan#1.

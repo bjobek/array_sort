@@ -2,22 +2,187 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Sep 13 21:11:54 2020
-# Process ID: 8606
+# Start of session at: Wed Sep 16 09:56:12 2020
+# Process ID: 19118
 # Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw
 # Command line: vivado
 # Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.log
 # Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6714.875 ; gain = 0.000 ; free physical = 1397 ; free virtual = 5683
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 6841.742 ; gain = 346.016 ; free physical = 1300 ; free virtual = 5591
+close_project
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Sep 16 10:02:07 2020] Launched synth_1...
+Run output will be captured here: /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7209.121 ; gain = 0.000 ; free physical = 894 ; free virtual = 5231
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property top top_block [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Sep 16 10:03:23 2020] Launched synth_1...
+Run output will be captured here: /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto b4cc3ee3887e48439332261a96738a9b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_path_tb_behav -key {Behavioral:sim_1:Functional:control_path_tb} -tclbatch {control_path_tb.tcl} -view {/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg
+source control_path_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_path_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7385.305 ; gain = 60.539 ; free physical = 125 ; free virtual = 4793
+run 5000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 7385.305 ; gain = 0.000 ; free physical = 231 ; free virtual = 4825
+close_project
 open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6441.176 ; gain = 87.594 ; free physical = 900 ; free virtual = 7490
 update_compile_order -fileset sources_1
+set_property top top_block [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Sep 16 10:47:49 2020] Launched synth_1...
+Run output will be captured here: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7385.305 ; gain = 0.000 ; free physical = 726 ; free virtual = 4846
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_path_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj control_path_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.sim/sim_1/behav/xsim'
+xelab -wto 2160812f10fb4ec9b208bde9433921eb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 2160812f10fb4ec9b208bde9433921eb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot control_path_tb_behav xil_defaultlib.control_path_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_path_tb_behav -key {Behavioral:sim_1:Functional:control_path_tb} -tclbatch {control_path_tb.tcl} -view {/home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/control_path_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/control_path_tb_behav.wcfg
+source control_path_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_path_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7481.238 ; gain = 57.844 ; free physical = 120 ; free virtual = 4420
+run 5000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7481.238 ; gain = 0.000 ; free physical = 749 ; free virtual = 5410
 close_project
 open_project /home/bjorn/Desktop/Lekekasse/project_2/project_2.xpr
 Scanning sources...
@@ -39,7 +204,9 @@ design_1_processing_system7_0_0
 design_1_axi_gpio_0_0
 
 update_compile_order -fileset sources_1
-launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 12:16:53 2020...

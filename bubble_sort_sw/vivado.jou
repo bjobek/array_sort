@@ -2,17 +2,58 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Sep 13 21:11:54 2020
-# Process ID: 8606
+# Start of session at: Wed Sep 16 09:56:12 2020
+# Process ID: 19118
 # Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw
 # Command line: vivado
 # Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.log
 # Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw/vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+close_project
+open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_block [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+launch_simulation
+open_wave_config /home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/control_path_tb_behav.wcfg
+source control_path_tb.tcl
+run 5000 us
+close_sim
+close_project
 open_project /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/bubble_sort_hw.xpr
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_block [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation
+open_wave_config /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_hw/control_path_tb_behav.wcfg
+source control_path_tb.tcl
+run 5000 us
+close_sim
 close_project
 open_project /home/bjorn/Desktop/Lekekasse/project_2/project_2.xpr
 update_compile_order -fileset sources_1
-launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/Array_Sorting/bubble_sort_sw -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk -hwspec /home/bjorn/Desktop/Lekekasse/project_2/project_2.sdk/design_1_wrapper.hdf

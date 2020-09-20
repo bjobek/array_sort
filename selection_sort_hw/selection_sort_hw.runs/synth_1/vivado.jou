@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Sep  6 10:27:54 2020
-# Process ID: 2402
-# Current directory: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1
-# Command line: vivado -log top_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
-# Log file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/top_block.vds
-# Journal file: /home/bjorn/Desktop/Lekekasse/selection_sort_hw/selection_sort_hw.runs/synth_1/vivado.jou
+# Start of session at: Wed Sep 16 13:38:40 2020
+# Process ID: 16992
+# Current directory: /home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.runs/synth_1
+# Command line: vivado -log top_block_tmp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_tmp.tcl
+# Log file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.runs/synth_1/top_block_tmp.vds
+# Journal file: /home/bjorn/Desktop/Lekekasse/Array_Sorting/selection_sort_hw/selection_sort_hw.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source top_block.tcl -notrace
+source top_block_tmp.tcl -notrace

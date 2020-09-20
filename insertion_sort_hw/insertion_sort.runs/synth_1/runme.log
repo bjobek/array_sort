@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log control_path.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source control_path.tcl
+    with args -log top_block.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
 
 
 ****** Vivado v2019.1 (64-bit)
@@ -8,19 +8,16 @@
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source control_path.tcl -notrace
-Command: synth_design -top control_path -part xc7z010clg400-1
+source top_block.tcl -notrace
+Command: synth_design -top top_block -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16033 
+INFO: Helper process launched with PID 20101 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.965 ; gain = 119.590 ; free physical = 417 ; free virtual = 4057
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1515.969 ; gain = 119.590 ; free physical = 413 ; free virtual = 4735
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'control_path' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
-	Parameter data_width bound to: 8 - type: integer 
-	Parameter addr_width bound to: 5 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'top_block' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter addr_width bound to: 5 - type: integer 
@@ -63,43 +60,22 @@ INFO: [Synth 8-638] synthesizing module 'comparator_block' [/home/bjorn/Desktop/
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'comparator_block' (5#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/comparator_block.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'top_block' (6#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/top_block.vhd:58]
-WARNING: [Synth 8-614] signal 'curr_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
-WARNING: [Synth 8-614] signal 'prev_index_val_data' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:92]
-WARNING: [Synth 8-614] signal 'PC' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
-WARNING: [Synth 8-614] signal 'PC_1' is read in the process but is not in the sensitivity list [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:134]
-INFO: [Synth 8-256] done synthesizing module 'control_path' (7#1) [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:17]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.715 ; gain = 173.340 ; free physical = 441 ; free virtual = 4081
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1569.719 ; gain = 173.340 ; free physical = 436 ; free virtual = 4759
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.684 ; gain = 176.309 ; free physical = 440 ; free virtual = 4080
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.688 ; gain = 176.309 ; free physical = 437 ; free virtual = 4760
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.688 ; gain = 184.312 ; free physical = 440 ; free virtual = 4080
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1580.691 ; gain = 184.312 ; free physical = 437 ; free virtual = 4760
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Synth 8-802] inferred FSM for state register 'pre_state_reg' in module 'control_path'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                   s_rst |                         00000001 |                              000
-                   s_ld1 |                         00000010 |                              001
-                   s_ld2 |                         00000100 |                              010
-                  s_comp |                         00001000 |                              011
-                  s_swp1 |                         00010000 |                              100
-                  s_swp2 |                         00100000 |                              101
-                   s_inc |                         01000000 |                              111
-                   s_dec |                         10000000 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'pre_state_reg' using encoding 'one-hot' in module 'control_path'
-WARNING: [Synth 8-327] inferring latch for variable 'PC_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:77]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_1_reg' [/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.srcs/sources_1/new/control_path.vhd:78]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1597.602 ; gain = 201.227 ; free physical = 399 ; free virtual = 4042
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1589.598 ; gain = 193.219 ; free physical = 410 ; free virtual = 4733
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -113,18 +89,15 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	                8 Bit    Registers := 34    
-	                5 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
-	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
-	   8 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 36    
-	   8 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -132,15 +105,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module control_path 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 2     
-+---Muxes : 
-	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   8 Input      5 Bit        Muxes := 2     
-	   8 Input      1 Bit        Muxes := 3     
 Module mux_block 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -153,7 +117,6 @@ Module single_port_ram
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 32    
-	                5 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 32    
 Module counter_block 
@@ -187,26 +150,8 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[7]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[6]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[5]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[4]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[3]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[2]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[1]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_pre_state_reg[0]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_reg[4]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_reg[3]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_reg[2]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_reg[1]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_reg[0]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_1_reg[4]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_1_reg[3]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_1_reg[2]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_1_reg[1]) is unused and will be removed from module control_path.
-WARNING: [Synth 8-3332] Sequential element (PC_1_reg[0]) is unused and will be removed from module control_path.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 220 ; free virtual = 3892
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1705.949 ; gain = 309.570 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,7 +164,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 218 ; free virtual = 3891
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,7 +176,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 217 ; free virtual = 3890
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4562
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,7 +200,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -268,7 +213,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -280,25 +225,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -311,37 +256,58 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     1|
+|3     |LUT2   |     2|
+|4     |LUT3   |    17|
+|5     |LUT4   |    10|
+|6     |LUT5   |     4|
+|7     |LUT6   |   106|
+|8     |MUXF7  |    32|
+|9     |FDCE   |   164|
+|10    |FDPE   |   118|
+|11    |IBUF   |    21|
+|12    |OBUF   |    11|
++------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     0|
-+------+---------+-------+------+
++------+------------+--------------------------+------+
+|      |Instance    |Module                    |Cells |
++------+------------+--------------------------+------+
+|1     |top         |                          |   487|
+|2     |  curr_i    |counter_block             |    12|
+|3     |  prev_i    |counter_block_0           |    49|
+|4     |  comp      |comparator_block          |     1|
+|5     |  mux_value |mux_block__parameterized1 |     8|
+|6     |  curr_v    |register_block            |     8|
+|7     |  prev_v    |register_block_1          |    16|
+|8     |  ram       |single_port_ram           |   360|
++------+------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 236 ; free virtual = 4563
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.008 ; gain = 302.633 ; free physical = 221 ; free virtual = 3891
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.016 ; gain = 302.633 ; free physical = 220 ; free virtual = 3890
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.887 ; gain = 315.508 ; free physical = 238 ; free virtual = 4565
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1711.895 ; gain = 315.508 ; free physical = 238 ; free virtual = 4565
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.602 ; gain = 0.000 ; free physical = 125 ; free virtual = 3811
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1818.492 ; gain = 0.000 ; free physical = 157 ; free virtual = 4484
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1781.602 ; gain = 385.324 ; free physical = 223 ; free virtual = 3909
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.602 ; gain = 0.000 ; free physical = 223 ; free virtual = 3909
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1818.492 ; gain = 422.211 ; free physical = 256 ; free virtual = 4584
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1818.492 ; gain = 0.000 ; free physical = 257 ; free virtual = 4584
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/control_path.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file control_path_utilization_synth.rpt -pb control_path_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 10 09:54:44 2020...
+INFO: [Common 17-1381] The checkpoint '/home/bjorn/Desktop/Lekekasse/Array_Sorting/insertion_sort_hw/insertion_sort.runs/synth_1/top_block.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_block_utilization_synth.rpt -pb top_block_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 10:03:46 2020...

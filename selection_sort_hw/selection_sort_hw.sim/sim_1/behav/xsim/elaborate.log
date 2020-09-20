@@ -4,20 +4,4 @@ Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 55c9f3813b
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.counter_block [\counter_block(max=5)\]
-Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=5)\]
-Compiling architecture behavioral of entity xil_defaultlib.mux_block [\mux_block(width=8)\]
-Compiling architecture rtl of entity xil_defaultlib.single_port_ram [single_port_ram_default]
-Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=8)\]
-Compiling architecture behavioral of entity xil_defaultlib.register_block [\register_block(width=5)\]
-Compiling architecture behavioral of entity xil_defaultlib.comparator_block [comparator_block_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_block [top_block_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_block_tb
-Built simulation snapshot top_block_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
